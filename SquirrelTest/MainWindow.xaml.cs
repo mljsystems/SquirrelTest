@@ -34,7 +34,7 @@ namespace SquirrelTest
         {
             manager = await UpdateManager
                 .GitHubUpdateManager(@"https://github.com/mljsystems/SquirrelTest");
-
+            
             CurrentVersionTextBox.Text = manager.CurrentlyInstalledVersion().ToString();
         }
 
@@ -56,7 +56,7 @@ namespace SquirrelTest
         {
             await manager.UpdateApp();
 
-            MessageBox.Show("Updated succesfuly!");
+            MessageBox.Show("Updated successfully! Please restart the app");
         }
     }
 }
